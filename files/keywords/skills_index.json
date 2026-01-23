@@ -1,0 +1,218 @@
+{
+  "weight_table": {
+    "0": -10, "1": -5, "2": -3, "3": -1, "4": 0,
+    "5": 2, "6": 4, "7": 7, "8": 12, "9": 17, "10": 20
+  },
+  "skills": {
+    "vba": {
+      "score": 9,
+      "weight": 17,
+      "keywords": ["access", "excel", "vba", "vbs", "macro"],
+      "profile_file": "vba.md"
+    },
+    "ai": {
+      "score": 10,
+      "weight": 20,
+      "keywords": ["ia", "ai", "llm", "gpt", "openai", "claude", "anthropic", "chatgpt", "intelligence artificielle", "mcp", "prompt"],
+      "profile_file": "ai.md"
+    },
+    "api": {
+      "score": 9,
+      "weight": 17,
+      "keywords": ["api", "rest", "backend", "intégration", "webhook"],
+      "profile_file": "api.md"
+    },
+    "mcp": {
+      "score": 9,
+      "weight": 17,
+      "keywords": ["mcp", "model context protocol"],
+      "profile_file": "mcp.md"
+    },
+    "architecture": {
+      "score": 9,
+      "weight": 17,
+      "keywords": ["architecture", "conception", "design", "archi", "système", "system design", "data-driven"],
+      "profile_file": "architecture.md"
+    },
+    "c": {
+      "score": 8,
+      "weight": 12,
+      "keywords": ["c", "c++", "cpp", "qt", "game", "moteur", "engine", "3d"],
+      "profile_file": "c.md"
+    },
+    "csharp": {
+      "score": 8,
+      "weight": 12,
+      "keywords": ["csharp", "c#", "unity", "unity3d", "mobile", "android", "ios", "jeu", "game"],
+      "profile_file": "csharp.md"
+    },
+    "worldbuilding": {
+      "score": 8,
+      "weight": 12,
+      "keywords": ["worldbuilding", "jdr", "rpg", "pathfinder", "univers", "fantasy", "game design"],
+      "profile_file": "worldbuilding.md"
+    },
+    "automation": {
+      "score": 7,
+      "weight": 7,
+      "keywords": ["automation", "automatisation", "bot", "automate", "workflow", "cron"],
+      "profile_file": "automation.md"
+    },
+    "linux": {
+      "score": 7,
+      "weight": 7,
+      "keywords": ["linux", "shell", "bash", "terminal", "ubuntu", "debian", "script shell"],
+      "profile_file": "linux.md"
+    },
+    "git": {
+      "score": 7,
+      "weight": 7,
+      "keywords": ["git", "gitea", "github", "gitlab", "versioning"],
+      "profile_file": "git.md"
+    },
+    "unreal": {
+      "score": 7,
+      "weight": 7,
+      "keywords": ["unreal", "unreal engine", "ue4", "ue5", "blueprint", "vr", "réalité virtuelle"],
+      "profile_file": "unreal.md"
+    },
+    "3d": {
+      "score": 7,
+      "weight": 7,
+      "keywords": ["3d", "rendu", "rendering", "vulkan", "opengl", "bgfx", "graphique", "vfx", "shader"],
+      "profile_file": "3d.md"
+    },
+    "conlang": {
+      "score": 7,
+      "weight": 7,
+      "keywords": ["conlang", "langue construite", "linguistique"],
+      "profile_file": "conlang.md"
+    },
+    "python": {
+      "score": 6,
+      "weight": 4,
+      "keywords": ["python", "script"],
+      "profile_file": "python.md"
+    },
+    "bot": {
+      "score": 6,
+      "weight": 4,
+      "keywords": ["bot", "chatbot", "discord bot", "telegram"],
+      "profile_file": "bot.md"
+    },
+    "gestion_projet": {
+      "score": 6,
+      "weight": 4,
+      "keywords": ["gestion projet", "chef de projet", "project manager", "planification"],
+      "profile_file": "gestion_projet.md"
+    },
+    "typescript": {
+      "score": 6,
+      "weight": 4,
+      "keywords": ["typescript", "ts"],
+      "profile_file": "typescript.md"
+    },
+    "nodejs": {
+      "score": 5,
+      "weight": 2,
+      "keywords": ["nodejs", "node", "express", "javascript", "backend"],
+      "profile_file": "nodejs.md"
+    },
+    "scraping": {
+      "score": 5,
+      "weight": 2,
+      "keywords": ["scraping", "scraper", "web scraping", "crawler", "extraction"],
+      "profile_file": "scraping.md"
+    },
+    "google_apps_script": {
+      "score": 5,
+      "weight": 2,
+      "keywords": ["google apps script", "gsheet", "google sheet", "spreadsheet", "google workspace"],
+      "profile_file": "google_apps_script.md"
+    },
+    "devops": {
+      "score": 5,
+      "weight": 2,
+      "keywords": ["devops", "docker", "nginx", "serveur", "server", "déploiement", "deploy", "vps", "hébergement"],
+      "profile_file": "devops.md"
+    },
+    "seo": {
+      "score": 5,
+      "weight": 2,
+      "keywords": ["seo", "référencement", "search engine", "google", "gutenberg"],
+      "profile_file": "seo.md"
+    },
+    "sql": {
+      "score": 4,
+      "weight": 0,
+      "keywords": ["sql", "mysql", "database", "bdd"],
+      "profile_file": "sql.md"
+    },
+    "securite": {
+      "score": 4,
+      "weight": 0,
+      "keywords": ["sécurité", "security", "proxy", "vpn", "cybersécurité"],
+      "profile_file": "securite.md"
+    },
+    "documentation": {
+      "score": 4,
+      "weight": 0,
+      "keywords": ["documentation", "doc", "rédaction", "technique"],
+      "profile_file": "documentation.md"
+    },
+    "nextjs": {
+      "score": 3,
+      "weight": -1,
+      "keywords": ["nextjs", "next", "react"],
+      "profile_file": "nextjs.md"
+    },
+    "go": {
+      "score": 3,
+      "weight": -1,
+      "keywords": ["go", "golang"],
+      "profile_file": "go.md"
+    },
+    "office365": {
+      "score": 3,
+      "weight": -1,
+      "keywords": ["office365", "office 365", "microsoft 365", "outlook", "word", "powerpoint", "sharepoint"],
+      "profile_file": "office365.md"
+    },
+    "ml": {
+      "score": 3,
+      "weight": -1,
+      "keywords": ["ml", "machine learning", "deep learning", "neural network", "tensorflow", "pytorch"],
+      "profile_file": "ml.md"
+    },
+    "langues": {
+      "score": 3,
+      "weight": -1,
+      "keywords": ["chinois", "chinese", "mandarin", "traduction", "translation", "langue"],
+      "profile_file": "langues.md"
+    },
+    "rust": {
+      "score": 2,
+      "weight": -3,
+      "keywords": ["rust", "cargo"],
+      "profile_file": "rust.md"
+    },
+    "audio": {
+      "score": 2,
+      "weight": -3,
+      "keywords": ["audio", "video", "ffmpeg", "transcription", "media"],
+      "profile_file": "audio.md"
+    },
+    "php": {
+      "score": 0,
+      "weight": -10,
+      "keywords": ["php", "laravel", "symfony"],
+      "profile_file": "php.md"
+    },
+    "ecommerce": {
+      "score": 0,
+      "weight": -10,
+      "keywords": ["e-commerce", "ecommerce", "boutique en ligne", "shop", "shopify", "prestashop", "woocommerce", "magento", "merchant center"],
+      "profile_file": "ecommerce.md"
+    }
+  }
+}

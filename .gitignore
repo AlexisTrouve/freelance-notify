@@ -1,0 +1,41 @@
+# Configuration (contains secrets)
+config.json
+
+# Runtime data
+seen_projects.json
+cron.log
+files/skill_stats.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+tmpclaude-*
+
+# Temp/debug files
+*.html
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Personal notes
+UPWORK_SCRAPER_REPORT.md
+SKILLS_TODO.md

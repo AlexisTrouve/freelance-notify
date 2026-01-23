@@ -1,0 +1,27 @@
+{
+  "discord_webhook_url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+  "anthropic_api_key": "sk-ant-api03-YOUR_KEY_HERE",
+  "check_interval_minutes": 30,
+  "stealth": {
+    "enabled": true,
+    "jitter_minutes": 5,
+    "min_delay_seconds": 1,
+    "max_delay_seconds": 3
+  },
+  "ai_scoring": {
+    "enabled": true,
+    "min_score": 5,
+    "min_weight": 5,
+    "model": "claude-haiku-4-5-20251001"
+  },
+  "profile_file": "files/profile.md",
+  "filters": {
+    "keywords": ["python", "api", "vba", "excel", "automation", "scraping", "bot"],
+    "exclude_keywords": ["wordpress", "logo"],
+    "min_budget": 100,
+    "max_budget": null,
+    "categories": []
+  },
+  "max_projects_per_notification": 10,
+  "seen_projects_file": "seen_projects.json"
+}
