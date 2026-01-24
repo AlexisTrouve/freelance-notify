@@ -1,6 +1,10 @@
-# Codeur.com Auto-Notify Bot
+# Freelance Notify
 
-Bot de surveillance automatique des projets Codeur.com avec notifications Discord et scoring IA.
+Bot de surveillance automatique des plateformes freelance avec notifications Discord et scoring IA.
+
+Actuellement supporté : **Codeur.com**
+
+Roadmap : Malt, Upwork, Freelance.com (voir [TODO.md](TODO.md))
 
 ## Features
 
@@ -17,7 +21,7 @@ Bot de surveillance automatique des projets Codeur.com avec notifications Discor
 ## Architecture
 
 ```
-codeur-notify/
+freelance-notify/
 ├── scraper.py              # Script principal
 ├── config.json             # Configuration (non versionné)
 ├── config.example.json     # Template de configuration
@@ -40,8 +44,8 @@ codeur-notify/
 ### 1. Cloner le repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/codeur-notify.git
-cd codeur-notify
+git clone https://github.com/YOUR_USERNAME/freelance-notify.git
+cd freelance-notify
 ```
 
 ### 2. Installer les dépendances
@@ -236,13 +240,13 @@ crontab -e
 ```
 
 ```cron
-*/30 * * * * cd /path/to/codeur-notify && /usr/bin/python3 scraper.py >> cron.log 2>&1
+*/30 * * * * cd /path/to/freelance-notify && /usr/bin/python3 scraper.py >> cron.log 2>&1
 ```
 
 ### Rapport hebdomadaire (lundi 9h)
 
 ```cron
-0 9 * * 1 cd /path/to/codeur-notify && /usr/bin/python3 scraper.py --weekly-report --no-jitter >> cron.log 2>&1
+0 9 * * 1 cd /path/to/freelance-notify && /usr/bin/python3 scraper.py --weekly-report --no-jitter >> cron.log 2>&1
 ```
 
 ## Discord Webhook
@@ -263,13 +267,13 @@ crontab -e
 
 - **IP** : `57.131.33.10`
 - **User** : `debian`
-- **Path** : `/home/debian/codeur-notify`
+- **Path** : `/home/debian/freelance-notify`
 
 ### Déployer les changements
 
 ```bash
-scp scraper.py debian@57.131.33.10:/home/debian/codeur-notify/
-scp files/keywords/*.json debian@57.131.33.10:/home/debian/codeur-notify/files/keywords/
+scp scraper.py debian@57.131.33.10:/home/debian/freelance-notify/
+scp files/keywords/*.json debian@57.131.33.10:/home/debian/freelance-notify/files/keywords/
 ```
 
 ## Logs

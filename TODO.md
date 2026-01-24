@@ -1,4 +1,4 @@
-# TODO - Codeur.com Auto-Notify Bot
+# TODO - Freelance Notify
 
 ## Roadmap
 
