@@ -1,86 +1,86 @@
 # Freelance Notify
 
-Bot de surveillance automatique des plateformes freelance avec notifications Discord et scoring IA.
+Automated freelance platform monitoring bot with Discord notifications and AI scoring.
 
-Actuellement supporté : **Codeur.com**
+Currently supported: **Codeur.com** (French freelance platform)
 
-Roadmap : Malt, Upwork, Freelance.com (voir [TODO.md](TODO.md))
+Roadmap: Malt, Upwork, Freelance.com (see [TODO.md](TODO.md))
 
 ## Features
 
-- **Scraping RSS** - Surveillance automatique des nouveaux projets
-- **Filtrage intelligent** - Par mots-clés, budget, catégories
-- **Scoring IA** - Évaluation automatique avec Claude Haiku 4.5
-- **Profil dynamique** - Assemblage de profil basé sur les skills matchés
-- **Système de poids** - Pré-filtrage avant appel IA (économise des tokens)
-- **Skills négatifs** - Pénaliser les technos non désirées
-- **Statistiques rolling** - Analyse du marché sur 30 jours
-- **Rapport hebdomadaire** - Résumé Discord automatique chaque lundi
-- **Anti-détection** - User-agents réalistes, jitter, délais aléatoires
+- **RSS Scraping** - Automatic monitoring of new projects
+- **Smart Filtering** - By keywords, budget, categories
+- **AI Scoring** - Automatic evaluation with Claude Haiku 4.5
+- **Dynamic Profile** - Profile assembly based on matched skills
+- **Weight System** - Pre-filtering before AI calls (saves tokens)
+- **Negative Skills** - Penalize unwanted technologies
+- **Rolling Statistics** - 30-day market analysis
+- **Weekly Report** - Automatic Discord summary every Monday
+- **Anti-Detection** - Realistic user-agents, jitter, random delays
 
 ## Architecture
 
 ```
 freelance-notify/
-├── scraper.py              # Script principal
-├── config.json             # Configuration (non versionné)
-├── config.example.json     # Template de configuration
-├── requirements.txt        # Dépendances Python
+├── scraper.py              # Main script
+├── config.json             # Configuration (not versioned)
+├── config.example.json     # Configuration template
+├── requirements.txt        # Python dependencies
 ├── files/
-│   ├── profile.md          # Profil freelancer de base
-│   ├── skill_stats.json    # Statistiques rolling 30j
+│   ├── profile.md          # Base freelancer profile
+│   ├── skill_stats.json    # Rolling 30-day statistics
 │   └── keywords/
-│       ├── skills_index.json         # Index des skills avec scores/poids
-│       ├── tech_keywords_detector.json # Détection de technos inconnues
-│       ├── vba.md                     # Profil skill VBA
-│       ├── python.md                  # Profil skill Python
-│       └── ...                        # Autres profils skills
-├── seen_projects.json      # IDs des projets déjà traités
-└── cron.log               # Logs d'exécution
+│       ├── skills_index.json         # Skills index with scores/weights
+│       ├── tech_keywords_detector.json # Unknown tech detection
+│       ├── vba.md                     # VBA skill profile
+│       ├── python.md                  # Python skill profile
+│       └── ...                        # Other skill profiles
+├── seen_projects.json      # Already processed project IDs
+└── cron.log               # Execution logs
 ```
 
 ## Installation
 
-### 1. Cloner le repo
+### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/freelance-notify.git
+git clone https://github.com/AlexisTrouve/freelance-notify.git
 cd freelance-notify
 ```
 
-### 2. Installer les dépendances
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configurer
+### 3. Configure
 
 ```bash
 cp config.example.json config.json
 nano config.json
 ```
 
-Modifier :
-- `discord_webhook_url` : Webhook Discord
-- `anthropic_api_key` : Clé API Anthropic (pour scoring IA)
-- `filters.keywords` : Mots-clés à surveiller
+Edit:
+- `discord_webhook_url`: Discord webhook URL
+- `anthropic_api_key`: Anthropic API key (for AI scoring)
+- `filters.keywords`: Keywords to monitor
 
-### 4. Créer le profil freelancer
+### 4. Create freelancer profile
 
 ```bash
 nano files/profile.md
 ```
 
-Décrire ton profil, compétences, expérience.
+Describe your profile, skills, experience.
 
-### 5. Tester
+### 5. Test
 
 ```bash
-# Dry run (sans notifications)
+# Dry run (no notifications)
 python scraper.py --dry-run --no-jitter
 
-# Debug (voir le matching détaillé)
+# Debug (detailed matching output)
 python scraper.py --debug --no-jitter
 
 # Stats
@@ -124,54 +124,54 @@ python scraper.py --stats
 
 | Option | Description |
 |--------|-------------|
-| `stealth.enabled` | Activer les mesures anti-détection |
-| `stealth.jitter_minutes` | Variation aléatoire au démarrage (0-N min) |
-| `ai_scoring.enabled` | Activer le scoring IA |
-| `ai_scoring.min_score` | Score minimum pour notifier (1-10) |
-| `ai_scoring.min_weight` | Poids minimum pour appeler l'IA |
-| `filters.keywords` | Au moins un doit matcher |
-| `filters.exclude_keywords` | Exclure si présent |
+| `stealth.enabled` | Enable anti-detection measures |
+| `stealth.jitter_minutes` | Random startup variation (0-N min) |
+| `ai_scoring.enabled` | Enable AI scoring |
+| `ai_scoring.min_score` | Minimum score to notify (1-10) |
+| `ai_scoring.min_weight` | Minimum weight to call AI |
+| `filters.keywords` | At least one must match |
+| `filters.exclude_keywords` | Exclude if present |
 
-## Système de Skills
+## Skills System
 
-### Principe
+### Concept
 
-Chaque skill a :
-- **Score** (0-10) : Ton niveau de compétence/intérêt
-- **Poids** : Points calculés selon le score
-- **Keywords** : Mots-clés qui déclenchent le match
-- **Profil** : Description détaillée (fichier .md)
+Each skill has:
+- **Score** (0-10): Your competence/interest level
+- **Weight**: Points calculated from score
+- **Keywords**: Words that trigger the match
+- **Profile**: Detailed description (.md file)
 
-### Table des poids
+### Weight Table
 
-| Score | Poids | Interprétation |
-|-------|-------|----------------|
-| 0 | -10 | Skill négatif (éviter) |
-| 1-3 | -5 à -1 | Faible intérêt |
-| 4-5 | 0 à +2 | Neutre |
-| 6-7 | +4 à +7 | Bon |
-| 8-10 | +12 à +20 | Excellent |
+| Score | Weight | Interpretation |
+|-------|--------|----------------|
+| 0 | -10 | Negative skill (avoid) |
+| 1-3 | -5 to -1 | Low interest |
+| 4-5 | 0 to +2 | Neutral |
+| 6-7 | +4 to +7 | Good |
+| 8-10 | +12 to +20 | Excellent |
 
-### Ajouter un skill
+### Adding a skill
 
-1. Créer le fichier profil :
+1. Create the profile file:
 ```bash
-nano files/keywords/nouveau_skill.md
+nano files/keywords/new_skill.md
 ```
 
-2. Ajouter dans `files/keywords/skills_index.json` :
+2. Add to `files/keywords/skills_index.json`:
 ```json
-"nouveau_skill": {
+"new_skill": {
   "score": 8,
   "weight": 12,
   "keywords": ["keyword1", "keyword2"],
-  "profile_file": "nouveau_skill.md"
+  "profile_file": "new_skill.md"
 }
 ```
 
-### Skills négatifs
+### Negative skills
 
-Pour pénaliser certaines technos :
+To penalize certain technologies:
 ```json
 "php": {
   "score": 0,
@@ -181,50 +181,50 @@ Pour pénaliser certaines technos :
 }
 ```
 
-## Commandes
+## Commands
 
 ```bash
-# Run normal (avec jitter)
+# Normal run (with jitter)
 python scraper.py
 
-# Dry run (test sans notifs)
+# Dry run (test without notifications)
 python scraper.py --dry-run --no-jitter
 
-# Debug (matching détaillé par job)
+# Debug (detailed matching per job)
 python scraper.py --debug --no-jitter
 
-# Afficher les statistiques
+# Display statistics
 python scraper.py --stats
 
-# Envoyer le rapport hebdo Discord
+# Send weekly Discord report
 python scraper.py --weekly-report --no-jitter
 ```
 
-## Statistiques
+## Statistics
 
-Le bot collecte automatiquement des stats sur le marché :
+The bot automatically collects market stats:
 
-- **Skills connus** : Fréquence de chaque skill dans les jobs
-- **Tendances** : Comparaison 7j vs 7j précédents
-- **Keywords inconnus** : Technos détectées mais non indexées
-- **Rolling 30 jours** : Nettoyage automatique des vieilles données
+- **Known skills**: Frequency of each skill in jobs
+- **Trends**: 7-day vs previous 7-day comparison
+- **Unknown keywords**: Detected but unindexed technologies
+- **Rolling 30 days**: Automatic cleanup of old data
 
-### Consulter les stats
+### View stats
 
 ```bash
 python scraper.py --stats
 ```
 
-Output :
+Output:
 ```
 ===========================================================================
-  STATISTIQUES DES SKILLS - Codeur.com (Rolling 30 jours)
+  SKILL STATISTICS - Codeur.com (Rolling 30 days)
 ===========================================================================
 
-  Jobs analyses: 450 (30j) | 120 (7j) | 98 (7j precedents)
+  Jobs analyzed: 450 (30d) | 120 (7d) | 98 (prev 7d)
 
-  SKILLS CONNUS (30 jours):
-  Skill              30j     7j    Trend   Prev 7j
+  KNOWN SKILLS (30 days):
+  Skill              30d     7d    Trend   Prev 7d
   -----------------------------------------------------------------------
     python             45     15     +25%        12
     api                32     10     -10%        11
@@ -233,7 +233,7 @@ Output :
 
 ## Cron Setup
 
-### Scraping toutes les 30 minutes
+### Scraping every 30 minutes
 
 ```bash
 crontab -e
@@ -243,7 +243,7 @@ crontab -e
 */30 * * * * cd /path/to/freelance-notify && /usr/bin/python3 scraper.py >> cron.log 2>&1
 ```
 
-### Rapport hebdomadaire (lundi 9h)
+### Weekly report (Monday 9am)
 
 ```cron
 0 9 * * 1 cd /path/to/freelance-notify && /usr/bin/python3 scraper.py --weekly-report --no-jitter >> cron.log 2>&1
@@ -251,20 +251,20 @@ crontab -e
 
 ## Discord Webhook
 
-1. Paramètres du channel Discord
-2. Intégrations > Webhooks > Nouveau Webhook
-3. Copier l'URL
-4. Coller dans `config.json`
+1. Discord channel settings
+2. Integrations > Webhooks > New Webhook
+3. Copy URL
+4. Paste in `config.json`
 
 ### Notifications
 
-- **Projets** : Embed avec titre, budget, score IA, skills matchés
-- **Rapport hebdo** : Résumé des tendances, top skills, keywords à indexer
+- **Projects**: Embed with title, budget, AI score, matched skills
+- **Weekly report**: Trends summary, top skills, keywords to index
 
-## Déploiement
+## Deployment
 
 ```bash
-# Copier les fichiers sur le serveur
+# Copy files to server
 scp scraper.py user@server:/path/to/freelance-notify/
 scp files/keywords/*.json user@server:/path/to/freelance-notify/files/keywords/
 ```
@@ -272,29 +272,29 @@ scp files/keywords/*.json user@server:/path/to/freelance-notify/files/keywords/
 ## Logs
 
 ```bash
-# Voir les derniers logs
+# View latest logs
 tail -f cron.log
 
-# Logs du jour
+# Today's logs
 grep "$(date +%Y-%m-%d)" cron.log
 ```
 
 ## Troubleshooting
 
-### Pas de projets trouvés
+### No projects found
 
-- Vérifier les keywords dans `config.json`
-- Tester avec `--debug` pour voir le matching
+- Check keywords in `config.json`
+- Test with `--debug` to see matching
 
-### Score IA toujours bas
+### AI score always low
 
-- Vérifier que `files/profile.md` est bien rempli
-- Ajuster les profils skills dans `files/keywords/*.md`
+- Check that `files/profile.md` is properly filled
+- Adjust skill profiles in `files/keywords/*.md`
 
-### Rate limiting Discord
+### Discord rate limiting
 
-- Discord limite à 30 requêtes/minute par webhook
-- Le bot espace automatiquement les envois
+- Discord limits to 30 requests/minute per webhook
+- The bot automatically spaces out requests
 
 ## License
 
