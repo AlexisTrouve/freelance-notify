@@ -263,17 +263,10 @@ crontab -e
 
 ## Déploiement
 
-### Serveur actuel
-
-- **IP** : `57.131.33.10`
-- **User** : `debian`
-- **Path** : `/home/debian/freelance-notify`
-
-### Déployer les changements
-
 ```bash
-scp scraper.py debian@57.131.33.10:/home/debian/freelance-notify/
-scp files/keywords/*.json debian@57.131.33.10:/home/debian/freelance-notify/files/keywords/
+# Copier les fichiers sur le serveur
+scp scraper.py user@server:/path/to/freelance-notify/
+scp files/keywords/*.json user@server:/path/to/freelance-notify/files/keywords/
 ```
 
 ## Logs
