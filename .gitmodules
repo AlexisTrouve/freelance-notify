@@ -1,0 +1,3 @@
+[submodule "adapters/upwork"]
+	path = adapters/upwork
+	url = https://github.com/kaymen99/Upwork-AI-jobs-applier.git

@@ -3,6 +3,7 @@ config.json
 
 # Runtime data
 seen_projects.json
+seen_upwork_jobs.json
 cron.log
 files/skill_stats.json
 

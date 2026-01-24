@@ -296,6 +296,50 @@ grep "$(date +%Y-%m-%d)" cron.log
 - Discord limits to 30 requests/minute per webhook
 - The bot automatically spaces out requests
 
+## Upwork Adapter (Optional)
+
+The Upwork adapter uses [Upwork-AI-jobs-applier](https://github.com/kaymen99/Upwork-AI-jobs-applier) as a git submodule for scraping, combined with our skills/scoring system.
+
+### Setup
+
+```bash
+# Initialize submodule
+git submodule update --init --recursive
+
+# Install Upwork dependencies
+pip install -r requirements-upwork.txt
+
+# Install Playwright browsers
+playwright install firefox
+```
+
+### Usage
+
+```bash
+# Scrape Upwork and notify Discord
+python upwork_adapter.py --query "python automation" --num-jobs 20
+
+# Dry run (no notifications)
+python upwork_adapter.py --query "VBA excel" --dry-run
+```
+
+### Notes
+
+- **Requires Firefox profile** with active Upwork session (Upwork blocks headless bots)
+- **Local only** - Cannot run on server without maintaining browser session
+- Uses same `config.json`, skills index, and Discord webhook as main scraper
+- No auto-posting of proposals - just scrape, score, and notify
+
+### Update Upstream
+
+```bash
+cd adapters/upwork
+git pull origin main
+cd ../..
+git add adapters/upwork
+git commit -m "Update Upwork submodule"
+```
+
 ## License
 
 MIT
