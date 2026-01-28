@@ -219,6 +219,12 @@
       "weight": -10,
       "keywords": ["power automate", "power apps", "power platform", "power bi", "dataverse", "microsoft flow", "powerautomate", "powerapps"],
       "profile_file": null
+    },
+    "blockchain": {
+      "score": 0,
+      "weight": -10,
+      "keywords": ["blockchain", "crypto", "cryptocurrency", "bitcoin", "ethereum", "solidity", "web3", "nft", "smart contract", "defi"],
+      "profile_file": null
     }
   }
 }
