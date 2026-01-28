@@ -225,6 +225,66 @@
       "weight": -10,
       "keywords": ["blockchain", "crypto", "cryptocurrency", "bitcoin", "ethereum", "solidity", "web3", "nft", "smart contract", "defi"],
       "profile_file": null
+    },
+    "fastapi": {
+      "score": 4,
+      "weight": 0,
+      "keywords": ["fastapi", "fast api", "pydantic"],
+      "profile_file": "fastapi.md"
+    },
+    "graphql": {
+      "score": 4,
+      "weight": 0,
+      "keywords": ["graphql", "apollo", "gql"],
+      "profile_file": "graphql.md"
+    },
+    "postgresql": {
+      "score": 3,
+      "weight": -1,
+      "keywords": ["postgresql", "postgres", "psql"],
+      "profile_file": "postgresql.md"
+    },
+    "redis": {
+      "score": 4,
+      "weight": 0,
+      "keywords": ["redis", "cache", "pub/sub", "pubsub"],
+      "profile_file": "redis.md"
+    },
+    "playwright": {
+      "score": 4,
+      "weight": 0,
+      "keywords": ["playwright", "automation testing", "e2e testing"],
+      "profile_file": "playwright.md"
+    },
+    "terraform": {
+      "score": 1,
+      "weight": -5,
+      "keywords": ["terraform", "infra as code", "infrastructure"],
+      "profile_file": null
+    },
+    "aws": {
+      "score": 2,
+      "weight": -3,
+      "keywords": ["aws", "amazon web services", "ec2", "s3", "lambda"],
+      "profile_file": null
+    },
+    "kubernetes": {
+      "score": 0,
+      "weight": -10,
+      "keywords": ["kubernetes", "k8s", "helm", "docker swarm"],
+      "profile_file": null
+    },
+    "elasticsearch": {
+      "score": 0,
+      "weight": -10,
+      "keywords": ["elasticsearch", "elastic search", "kibana", "logstash"],
+      "profile_file": null
+    },
+    "notion_airtable": {
+      "score": 2,
+      "weight": -3,
+      "keywords": ["notion", "airtable", "zapier", "integromat", "automation platform"],
+      "profile_file": null
     }
   }
 }
