@@ -191,8 +191,8 @@
       "profile_file": "langues.md"
     },
     "rust": {
-      "score": 2,
-      "weight": -3,
+      "score": 5,
+      "weight": 2,
       "keywords": ["rust", "cargo", "rustlang"],
       "profile_file": "rust.md"
     },
@@ -213,6 +213,12 @@
       "weight": -10,
       "keywords": ["e-commerce", "ecommerce", "boutique en ligne", "online store", "shop", "shopify", "prestashop", "woocommerce", "magento", "merchant center", "online shop"],
       "profile_file": "ecommerce.md"
+    },
+    "power_platform": {
+      "score": 0,
+      "weight": -10,
+      "keywords": ["power automate", "power apps", "power platform", "power bi", "dataverse", "microsoft flow", "powerautomate", "powerapps"],
+      "profile_file": null
     }
   }
 }
