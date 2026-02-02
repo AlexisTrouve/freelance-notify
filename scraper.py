@@ -263,7 +263,7 @@ class CodeurScraper:
         return sum(skill.get('weight', 0) for skill in matched_skills)
 
     def _assemble_profile(self, matched_skills: list[dict]) -> str:
-        """Assemble dynamic profile from matched skills"""
+        """Assemble dynamic profile from matched skills + project reports"""
         parts = []
 
         # Add base profile header if exists
@@ -289,7 +289,47 @@ class CodeurScraper:
                             parts.append(f"\n## {skill['name'].upper()} (Score: {skill['score']}/10)\n")
                             parts.append(content)
 
+        # Add relevant project reports based on matched skills
+        project_reports = self._get_relevant_projects(matched_skills)
+        if project_reports:
+            parts.append("\n---\n")
+            parts.append("# Projets Portfolio Pertinents\n")
+            for project_content in project_reports:
+                parts.append(f"\n{project_content}\n")
+
         return "\n".join(parts)
+
+    def _get_relevant_projects(self, matched_skills: list[dict]) -> list[str]:
+        """Get project reports based on matched skills"""
+        project_files = set()  # Use set to avoid duplicates
+
+        for skill in matched_skills:
+            skill_name = skill.get('name', '')
+            # Get skill data from skills_index
+            skill_data = self.skills_index.get('skills', {}).get(skill_name, {})
+            projects = skill_data.get('projects', [])
+
+            # Add all project files for this skill
+            for project_file in projects:
+                project_files.add(project_file)
+
+        # Load and return project contents
+        project_contents = []
+        project_dir = Path(__file__).parent / 'files' / 'portfolio'
+
+        for project_file in sorted(project_files):  # Sort for consistent ordering
+            project_path = project_dir / project_file
+            if project_path.exists():
+                try:
+                    with open(project_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        project_contents.append(content)
+                except Exception as e:
+                    logger.debug(f"Could not load project report {project_file}: {e}")
+            else:
+                logger.debug(f"Project report not found: {project_path}")
+
+        return project_contents
 
     def _load_seen_projects(self) -> set:
         seen_file = Path(self.config.get('seen_projects_file', 'seen_projects.json'))
@@ -988,10 +1028,14 @@ def main():
             # Determine if would be sent to AI
             will_score = weight >= min_weight
 
-            print(f"[{i}/{len(filtered)}] {p['title'][:55]}...")
-            print(f"    Budget: {p.get('budget_text', 'N/A')}")
-            print(f"    Categorie: {p.get('category', 'N/A')[:50]}")
-            print(f"    Description: {p.get('description', 'N/A')[:80]}...")
+            # Clean text for Windows console (remove emojis/special chars)
+            def clean_text(text):
+                return text.encode('ascii', 'ignore').decode('ascii') if text else 'N/A'
+
+            print(f"[{i}/{len(filtered)}] {clean_text(p['title'][:55])}...")
+            print(f"    Budget: {clean_text(p.get('budget_text', 'N/A'))}")
+            print(f"    Categorie: {clean_text(p.get('category', 'N/A')[:50])}")
+            print(f"    Description: {clean_text(p.get('description', 'N/A')[:80])}...")
             print()
 
             if matched:

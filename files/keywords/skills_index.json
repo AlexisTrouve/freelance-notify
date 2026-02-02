@@ -8,283 +8,465 @@
       "score": 9,
       "weight": 17,
       "keywords": ["access", "excel", "vba", "vbs", "macro", "spreadsheet"],
-      "profile_file": "vba.md"
+      "profile_file": "vba.md",
+      "projects": [
+        "mcp-servers_report.md",
+        "freelance-dashboard_report.md",
+        "timetrack-pro_report.md",
+        "ProRequestManager_report.md"
+      ]
     },
     "ai": {
       "score": 10,
       "weight": 20,
       "keywords": ["ia", "ai", "llm", "gpt", "openai", "claude", "anthropic", "chatgpt", "intelligence artificielle", "artificial intelligence", "mcp", "prompt", "generative"],
-      "profile_file": "ai.md"
+      "profile_file": "ai.md",
+      "projects": [
+        "MagistraAI_report.md",
+        "MoemoeAI_report.md",
+        "aissia_report.md",
+        "maicivy_report.md",
+        "wechat-homework-bot_report.md",
+        "seogeneratorserver_report.md",
+        "videotoMP3Transcriptor_report.md",
+        "Omniscyra_report.md",
+        "confluent_report.md",
+        "secondvoice_report.md"
+      ]
     },
     "api": {
       "score": 9,
       "weight": 17,
       "keywords": ["api", "rest", "backend", "intégration", "integration", "webhook", "endpoint"],
-      "profile_file": "api.md"
+      "profile_file": "api.md",
+      "projects": [
+        "seogeneratorserver_report.md",
+        "maicivy_report.md",
+        "hanasuba_report.md",
+        "CoconSystemCogesco_report.md",
+        "confluent_report.md",
+        "DockerCCSpecialAPI_report.md"
+      ]
     },
     "mcp": {
       "score": 9,
       "weight": 17,
       "keywords": ["mcp", "model context protocol"],
-      "profile_file": "mcp.md"
+      "profile_file": "mcp.md",
+      "projects": [
+        "mcp-servers_report.md",
+        "aissia_report.md",
+        "documentationGlobal_report.md"
+      ]
     },
     "architecture": {
       "score": 9,
       "weight": 17,
       "keywords": ["architecture", "conception", "design", "archi", "système", "system", "system design", "data-driven"],
-      "profile_file": "architecture.md"
+      "profile_file": "architecture.md",
+      "projects": [
+        "MagistraAI_report.md",
+        "MoemoeAI_report.md",
+        "groveengine_report.md",
+        "Omniscyra_report.md",
+        "aissia_report.md"
+      ]
     },
     "c": {
       "score": 8,
       "weight": 12,
       "keywords": ["c", "c++", "cpp", "qt", "game", "moteur", "engine", "3d"],
-      "profile_file": "c.md"
+      "profile_file": "c.md",
+      "projects": [
+        "groveengine_report.md",
+        "Omniscyra_report.md",
+        "warfactoryracine_report.md",
+        "Project_Rifting_Void_report.md",
+        "MeguraColonyML_report.md",
+        "aissia_report.md",
+        "mobilecommand_report.md",
+        "secondvoice_report.md"
+      ]
     },
     "csharp": {
       "score": 8,
       "weight": 12,
       "keywords": ["csharp", "c#", "unity", "unity3d", "mobile", "android", "ios", "jeu", "game"],
-      "profile_file": "csharp.md"
+      "profile_file": "csharp.md",
+      "projects": []
     },
     "worldbuilding": {
       "score": 8,
       "weight": 12,
       "keywords": ["worldbuilding", "world building", "jdr", "rpg", "pathfinder", "univers", "universe", "fantasy", "game design", "lore"],
-      "profile_file": "worldbuilding.md"
+      "profile_file": "worldbuilding.md",
+      "projects": [
+        "Methalnia_report.md",
+        "warfactoryracine_report.md",
+        "civjdr_report.md",
+        "WritingFantasy_report.md",
+        "mobilecommand_report.md",
+        "S-SWrapper_report.md"
+      ]
     },
     "automation": {
       "score": 7,
       "weight": 7,
       "keywords": ["automation", "automatisation", "bot", "automate", "workflow", "cron", "scheduled", "task automation"],
-      "profile_file": "automation.md"
+      "profile_file": "automation.md",
+      "projects": [
+        "mcp-servers_report.md",
+        "ProjectTracker_report.md",
+        "RedditSaveSaver_report.md",
+        "freelance_planning_report.md"
+      ]
     },
     "linux": {
       "score": 7,
       "weight": 7,
       "keywords": ["linux", "shell", "bash", "terminal", "ubuntu", "debian", "script shell", "command line", "cli"],
-      "profile_file": "linux.md"
+      "profile_file": "linux.md",
+      "projects": [
+        "ProjectTracker_report.md",
+        "blockchain-cli_report.md"
+      ]
     },
     "git": {
       "score": 7,
       "weight": 7,
       "keywords": ["git", "gitea", "github", "gitlab", "versioning", "version control"],
-      "profile_file": "git.md"
+      "profile_file": "git.md",
+      "projects": [
+        "ProjectTracker_report.md"
+      ]
     },
     "unreal": {
       "score": 7,
       "weight": 7,
       "keywords": ["unreal", "unreal engine", "ue4", "ue5", "blueprint", "vr", "réalité virtuelle", "virtual reality"],
-      "profile_file": "unreal.md"
+      "profile_file": "unreal.md",
+      "projects": [
+        "S-SWrapper_report.md"
+      ]
     },
     "3d": {
       "score": 7,
       "weight": 7,
       "keywords": ["3d", "rendu", "rendering", "vulkan", "opengl", "bgfx", "graphique", "graphics", "vfx", "shader"],
-      "profile_file": "3d.md"
+      "profile_file": "3d.md",
+      "projects": [
+        "groveengine_report.md"
+      ]
     },
     "conlang": {
       "score": 7,
       "weight": 7,
       "keywords": ["conlang", "langue construite", "constructed language", "linguistique", "linguistics"],
-      "profile_file": "conlang.md"
+      "profile_file": "conlang.md",
+      "projects": [
+        "civjdr_report.md",
+        "confluent_report.md"
+      ]
     },
     "python": {
       "score": 6,
       "weight": 4,
       "keywords": ["python", "script", "scripting"],
-      "profile_file": "python.md"
+      "profile_file": "python.md",
+      "projects": [
+        "ProjectTracker_report.md",
+        "ChineseClass_report.md",
+        "RedditSaveSaver_report.md",
+        "FrenchLearningPlan_report.md",
+        "DockerCCSpecialAPI_report.md"
+      ]
     },
     "bot": {
       "score": 6,
       "weight": 4,
       "keywords": ["bot", "chatbot", "discord bot", "telegram", "slack bot"],
-      "profile_file": "bot.md"
+      "profile_file": "bot.md",
+      "projects": [
+        "wechat-homework-bot_report.md",
+        "RedditSaveSaver_report.md"
+      ]
     },
     "gestion_projet": {
       "score": 6,
       "weight": 4,
       "keywords": ["gestion projet", "chef de projet", "project manager", "project management", "planification", "planning", "roadmap"],
-      "profile_file": "gestion_projet.md"
+      "profile_file": "gestion_projet.md",
+      "projects": [
+        "AwenMoneyOperation_report.md",
+        "knowledgemapperrepo_report.md",
+        "freelance_planning_report.md"
+      ]
     },
     "typescript": {
       "score": 6,
       "weight": 4,
       "keywords": ["typescript", "ts"],
-      "profile_file": "typescript.md"
+      "profile_file": "typescript.md",
+      "projects": [
+        "mcp-servers_report.md"
+      ]
     },
     "nodejs": {
       "score": 5,
       "weight": 2,
       "keywords": ["nodejs", "node", "express", "javascript", "backend", "npm"],
-      "profile_file": "nodejs.md"
+      "profile_file": "nodejs.md",
+      "projects": [
+        "seogeneratorserver_report.md",
+        "personal-hub_report.md",
+        "wechat-homework-bot_report.md",
+        "videotoMP3Transcriptor_report.md",
+        "Class_generator_report.md",
+        "confluent_report.md"
+      ]
     },
     "scraping": {
       "score": 5,
       "weight": 2,
       "keywords": ["scraping", "scraper", "web scraping", "crawler", "extraction", "data extraction", "parsing"],
-      "profile_file": "scraping.md"
+      "profile_file": "scraping.md",
+      "projects": [
+        "RedditSaveSaver_report.md"
+      ]
     },
     "google_apps_script": {
       "score": 5,
       "weight": 2,
       "keywords": ["google apps script", "gsheet", "google sheet", "spreadsheet", "google workspace", "apps script"],
-      "profile_file": "google_apps_script.md"
+      "profile_file": "google_apps_script.md",
+      "projects": []
     },
     "devops": {
       "score": 5,
       "weight": 2,
       "keywords": ["devops", "docker", "nginx", "serveur", "server", "déploiement", "deploy", "deployment", "vps", "hébergement", "hosting", "infrastructure"],
-      "profile_file": "devops.md"
+      "profile_file": "devops.md",
+      "projects": [
+        "PiloopServ_report.md",
+        "DockerCCSpecialAPI_report.md",
+        "documentationGlobal_report.md"
+      ]
     },
     "seo": {
       "score": 5,
       "weight": 2,
       "keywords": ["seo", "référencement", "search engine", "google", "gutenberg", "ranking", "organic"],
-      "profile_file": "seo.md"
+      "profile_file": "seo.md",
+      "projects": [
+        "seogeneratorserver_report.md",
+        "CoconSystemCogesco_report.md"
+      ]
     },
     "sql": {
       "score": 4,
       "weight": 0,
       "keywords": ["sql", "mysql", "database", "bdd", "postgresql", "sqlite"],
-      "profile_file": "sql.md"
+      "profile_file": "sql.md",
+      "projects": [
+        "timetrack-pro_report.md",
+        "ProRequestManager_report.md",
+        "hanasuba_report.md"
+      ]
     },
     "securite": {
       "score": 4,
       "weight": 0,
       "keywords": ["sécurité", "security", "proxy", "vpn", "cybersécurité", "cybersecurity", "pentest", "audit"],
-      "profile_file": "securite.md"
+      "profile_file": "securite.md",
+      "projects": [
+        "DockerCCSpecialAPI_report.md",
+        "documentationGlobal_report.md"
+      ]
     },
     "documentation": {
       "score": 4,
       "weight": 0,
       "keywords": ["documentation", "doc", "rédaction", "writing", "technical writing", "technique", "technical"],
-      "profile_file": "documentation.md"
+      "profile_file": "documentation.md",
+      "projects": [
+        "personal-hub_report.md",
+        "AwenMoneyOperation_report.md",
+        "ClaudeSelf_report.md",
+        "documentationGlobal_report.md"
+      ]
     },
     "nextjs": {
       "score": 3,
       "weight": -1,
       "keywords": ["nextjs", "next", "react", "frontend", "front-end"],
-      "profile_file": "nextjs.md"
+      "profile_file": "nextjs.md",
+      "projects": [
+        "Omniscyra_report.md",
+        "maicivy_report.md"
+      ]
     },
     "go": {
       "score": 3,
       "weight": -1,
       "keywords": ["go", "golang"],
-      "profile_file": "go.md"
+      "profile_file": "go.md",
+      "projects": [
+        "maicivy_report.md"
+      ]
     },
     "office365": {
       "score": 3,
       "weight": -1,
       "keywords": ["office365", "office 365", "microsoft 365", "outlook", "word", "powerpoint", "sharepoint", "teams"],
-      "profile_file": "office365.md"
+      "profile_file": "office365.md",
+      "projects": []
     },
     "ml": {
       "score": 3,
       "weight": -1,
       "keywords": ["ml", "machine learning", "deep learning", "neural network", "tensorflow", "pytorch", "model training"],
-      "profile_file": "ml.md"
+      "profile_file": "ml.md",
+      "projects": [
+        "MeguraColonyML_report.md"
+      ]
     },
     "langues": {
       "score": 3,
       "weight": -1,
       "keywords": ["chinois", "chinese", "mandarin", "traduction", "translation", "langue", "language", "localization"],
-      "profile_file": "langues.md"
+      "profile_file": "langues.md",
+      "projects": [
+        "ChineseClass_report.md",
+        "FrenchLearningPlan_report.md",
+        "secondvoice_report.md"
+      ]
     },
     "rust": {
       "score": 5,
       "weight": 2,
       "keywords": ["rust", "cargo", "rustlang"],
-      "profile_file": "rust.md"
+      "profile_file": "rust.md",
+      "projects": [
+        "blockchain-cli_report.md",
+        "blockchain-core_report.md",
+        "hanasuba_report.md",
+        "CoconSystemCogesco_report.md"
+      ]
     },
     "audio": {
       "score": 2,
       "weight": -3,
       "keywords": ["audio", "video", "ffmpeg", "transcription", "media", "sound", "voiceover"],
-      "profile_file": "audio.md"
+      "profile_file": "audio.md",
+      "projects": [
+        "AlwaysOnRecorder_report.md",
+        "videotoMP3Transcriptor_report.md",
+        "secondvoice_report.md"
+      ]
     },
     "php": {
       "score": 0,
       "weight": -10,
       "keywords": ["php", "laravel", "symfony", "wordpress"],
-      "profile_file": "php.md"
+      "profile_file": "php.md",
+      "projects": []
     },
     "ecommerce": {
       "score": 0,
       "weight": -10,
       "keywords": ["e-commerce", "ecommerce", "boutique en ligne", "online store", "shop", "shopify", "prestashop", "woocommerce", "magento", "merchant center", "online shop"],
-      "profile_file": "ecommerce.md"
+      "profile_file": "ecommerce.md",
+      "projects": []
     },
     "power_platform": {
       "score": 0,
       "weight": -10,
       "keywords": ["power automate", "power apps", "power platform", "power bi", "dataverse", "microsoft flow", "powerautomate", "powerapps"],
-      "profile_file": null
+      "profile_file": null,
+      "projects": []
     },
     "blockchain": {
       "score": 0,
       "weight": -10,
       "keywords": ["blockchain", "crypto", "cryptocurrency", "bitcoin", "ethereum", "solidity", "web3", "nft", "smart contract", "defi"],
-      "profile_file": null
+      "profile_file": null,
+      "projects": [
+        "blockchain-cli_report.md",
+        "blockchain-core_report.md",
+        "blockchain-flutter_report.md"
+      ]
     },
     "fastapi": {
       "score": 4,
       "weight": 0,
       "keywords": ["fastapi", "fast api", "pydantic"],
-      "profile_file": "fastapi.md"
+      "profile_file": "fastapi.md",
+      "projects": []
     },
     "graphql": {
       "score": 4,
       "weight": 0,
       "keywords": ["graphql", "apollo", "gql"],
-      "profile_file": "graphql.md"
+      "profile_file": "graphql.md",
+      "projects": []
     },
     "postgresql": {
       "score": 3,
       "weight": -1,
       "keywords": ["postgresql", "postgres", "psql"],
-      "profile_file": "postgresql.md"
+      "profile_file": "postgresql.md",
+      "projects": [
+        "hanasuba_report.md"
+      ]
     },
     "redis": {
       "score": 4,
       "weight": 0,
       "keywords": ["redis", "cache", "pub/sub", "pubsub"],
-      "profile_file": "redis.md"
+      "profile_file": "redis.md",
+      "projects": []
     },
     "playwright": {
       "score": 4,
       "weight": 0,
       "keywords": ["playwright", "automation testing", "e2e testing"],
-      "profile_file": "playwright.md"
+      "profile_file": "playwright.md",
+      "projects": []
     },
     "terraform": {
       "score": 1,
       "weight": -5,
       "keywords": ["terraform", "infra as code", "infrastructure"],
-      "profile_file": null
+      "profile_file": null,
+      "projects": []
     },
     "aws": {
       "score": 2,
       "weight": -3,
       "keywords": ["aws", "amazon web services", "ec2", "s3", "lambda"],
-      "profile_file": null
+      "profile_file": null,
+      "projects": []
     },
     "kubernetes": {
       "score": 0,
       "weight": -10,
       "keywords": ["kubernetes", "k8s", "helm", "docker swarm"],
-      "profile_file": null
+      "profile_file": null,
+      "projects": []
     },
     "elasticsearch": {
       "score": 0,
       "weight": -10,
       "keywords": ["elasticsearch", "elastic search", "kibana", "logstash"],
-      "profile_file": null
+      "profile_file": null,
+      "projects": []
     },
     "notion_airtable": {
       "score": 2,
       "weight": -3,
       "keywords": ["notion", "airtable", "zapier", "integromat", "automation platform"],
-      "profile_file": null
+      "profile_file": null,
+      "projects": []
     }
   }
 }

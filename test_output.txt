@@ -1,0 +1,21 @@
+2026-02-02 13:56:56,865 - INFO - Fetching RSS feed...
+2026-02-02 13:56:58,513 - INFO - Found 35 projects in RSS feed
+2026-02-02 13:56:58,767 - INFO - Skill stats updated: 70 total jobs analyzed (30 day rolling)
+
+============================================================
+  DEBUG MODE - 35 projets RSS, 2 apres filtrage
+  Seuil poids minimum: 5
+============================================================
+
+[1/2] Recherche développeur SaaSDéveloppement d’une applicati...
+    Budget: 1 000 € à 10 000 €
+    Categorie: Développement spécifique, SaaS, Full-stack, Stripe
+Traceback (most recent call last):
+  File "C:\Users\alexi\Documents\projects\codeur-notify\scraper.py", line 1083, in <module>
+    main()
+  File "C:\Users\alexi\Documents\projects\codeur-notify\scraper.py", line 1034, in main
+    print(f"    Description: {p.get('description', 'N/A')[:80]}...")
+  File "C:\Users\alexi\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4cc' in position 17: character maps to <undefined>
