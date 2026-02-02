@@ -456,7 +456,7 @@ URL: {project.get('url', 'N/A')}
         if not scoring_config.get('enabled', False):
             return projects
 
-        min_score = scoring_config.get('min_score', 7)
+        min_score = scoring_config.get('codeur_min_score', 7)
         scored = []
 
         logger.info(f"Scoring {len(projects)} projects with AI (min score: {min_score})...")
@@ -1069,7 +1069,7 @@ def main():
         if filtered and config.get('ai_scoring', {}).get('enabled', False):
             print("\nRunning AI scoring...")
             filtered = scraper.score_projects(filtered)
-            print(f"After AI scoring: {len(filtered)} projects (>= {config['ai_scoring'].get('min_score', 7)}/10)")
+            print(f"After AI scoring: {len(filtered)} projects (>= {config['ai_scoring'].get('codeur_min_score', 7)}/10)")
 
         for p in filtered[:5]:
             print(f"\n- {p.get('title')}")

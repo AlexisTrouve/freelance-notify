@@ -550,7 +550,7 @@ IMPORTANT: Respond with ONLY a JSON object:
         # Apply our skills matching and scoring
         scoring_config = self.config.get('ai_scoring', {})
         min_weight = scoring_config.get('min_weight', 5)
-        min_score = scoring_config.get('min_score', 5)
+        min_score = scoring_config.get('upwork_min_score', 8)
 
         scored_jobs = []
         for job in new_jobs:
